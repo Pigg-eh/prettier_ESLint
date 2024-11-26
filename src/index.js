@@ -1,16 +1,22 @@
-import _ from 'lodash';
+import _ from 'lodash'
 import './style.css'
 
-function component() {
-  const element = document.createElement('div');
+function component () {
+  const element = document.createElement('div')
 
   // Lodash, now imported by this script
   // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.innerHTML = 'THE FAST test for commit'
-  element.classList.add('hello');
 
-  return element;
+  function testLog () {
+    const foo = prompt('type')
+
+    return element.innerHTML = `foo ${foo}`
+  }
+
+  testLog()
+  element.classList.add('hello')
+
+  return element
 }
- 
-  
-document.body.appendChild(component());
+
+document.body.appendChild(component())
